@@ -1,22 +1,9 @@
 body{margin:0;font-family:Arial,sans-serif;background:#0d0d0d;color:white;}
 header{display:flex;justify-content:space-between;align-items:center;padding:20px 50px;background:#111;border-bottom:1px solid #333;}
 .logo{color:gold;font-size:28px;font-weight:bold;}
-nav a{color:white;text-decoration:none;margin-left:25px;transition:0.3s;}
+nav a{color:white;text-decoration:none;margin-left:25px;transition:0.3s;cursor:pointer;}
 nav a:hover{color:gold;}
-.hero{text-align:center;padding:100px 20px;background:linear-gradient(to right,#111,#1b1b1b);}
-.hero h1{color:gold;margin-bottom:20px;}
-.hero p{color:#ccc;margin-bottom:30px;}
-.hero-buttons a{display:inline-block;padding:14px 30px;margin:10px;border-radius:10px;font-weight:bold;text-decoration:none;transition:0.3s;}
-.btn-primary{background:gold;color:black;}
-.btn-primary:hover{background:#fff;color:black;transform:scale(1.05);}
-.btn-secondary{border:2px solid gold;color:gold;background:transparent;}
-.btn-secondary:hover{background:gold;color:black;}
-.categories{text-align:center;padding:50px;}
-.category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;}
-.category-card{display:block;background:#1a1a1a;padding:20px;border-radius:20px;border:1px solid #333;text-decoration:none;color:white;text-align:center;transition:0.3s;}
-.category-card img{width:120px;height:120px;object-fit:cover;margin-bottom:15px;border-radius:10px;}
-.category-card h3{margin-top:10px;}
-.category-card:hover{transform:translateY(-8px);border-color:gold;}
+
 .auth-container{max-width:400px;margin:100px auto;background:#1a1a1a;padding:40px;border-radius:15px;text-align:center;border:1px solid #333;}
 .auth-container h1{color:gold;margin-bottom:30px;}
 .auth-container label{display:block;text-align:left;margin-bottom:5px;color:#ccc;margin-top:15px;}
@@ -27,43 +14,8 @@ nav a:hover{color:gold;}
 .auth-container p{margin-top:20px;color:#ccc;}
 .auth-container p a{color:gold;text-decoration:none;}
 .auth-container p a:hover{text-decoration:underline;}
-/* Wallet Saldo */
 
-.wallet-box{
-    margin-top:40px;
-    background:#151515;
-    border:1px solid #333;
-    border-radius:20px;
-    padding:30px;
-    max-width:400px;
-    margin-left:auto;
-    margin-right:auto;
-    box-shadow:0 0 20px rgba(255,215,0,0.1);
-}
-
-.wallet-box h2{
-    color:gold;
-    margin-bottom:15px;
-}
-
-.balance{
-    font-size:40px;
-    font-weight:bold;
-    color:#fff;
-    margin:20px 0;
-}
-
-.topup-btn{
-    background:gold;
-    color:black;
-    border:none;
-    padding:15px 25px;
-    border-radius:12px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.topup-btn:hover{
-    transform:scale(1.05);
-}
+.topup-btn{background:gold;color:black;border:none;padding:12px 20px;border-radius:10px;font-weight:bold;margin:5px;cursor:pointer;transition:0.3s;}
+.topup-btn:hover{transform:scale(1.05);}
+.member-info{background:#151515;padding:20px;border-radius:15px;margin-top:20px;}
+.member-info p{margin:10px 0;}
