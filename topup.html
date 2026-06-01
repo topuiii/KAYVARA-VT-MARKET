@@ -12,7 +12,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI, sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
@@ -23,20 +23,19 @@ color:white;
 header{
 background:#000;
 padding:20px;
-border-bottom:2px solid gold;
+text-align:center;
+border-bottom:3px solid gold;
 }
 
 .logo{
-font-size:30px;
+font-size:32px;
 font-weight:bold;
 color:gold;
-text-align:center;
 }
 
 .subtitle{
-text-align:center;
-margin-top:5px;
 color:#ccc;
+margin-top:5px;
 }
 
 .hero{
@@ -46,140 +45,107 @@ background:linear-gradient(135deg,#000,#1a1a1a);
 }
 
 .hero h1{
-font-size:40px;
+font-size:42px;
 color:gold;
 }
 
 .hero p{
-margin-top:15px;
-font-size:18px;
+margin-top:10px;
 color:#ddd;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 30px;
-background:gold;
-color:black;
-font-weight:bold;
-text-decoration:none;
-border-radius:8px;
 }
 
 .section-title{
 text-align:center;
-font-size:28px;
 margin:40px 0 20px;
 color:gold;
+font-size:28px;
 }
 
 .games{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
-padding:20px;
-max-width:1200px;
+max-width:1300px;
 margin:auto;
+padding:20px;
 }
 
 .card{
 background:#1a1a1a;
-border:1px solid #333;
-border-radius:12px;
 padding:20px;
+border-radius:12px;
 text-align:center;
-transition:0.3s;
+border:1px solid #333;
+transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
 border-color:gold;
-}
-
-.card img{
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:10px;
+transform:translateY(-5px);
 }
 
 .card h3{
-margin-top:15px;
 color:gold;
+margin-bottom:10px;
 }
 
 .card p{
-margin-top:8px;
 color:#ccc;
 }
 
-.form-section{
-max-width:700px;
+.form-box{
+max-width:800px;
 margin:50px auto;
-padding:30px;
 background:#1a1a1a;
+padding:30px;
 border-radius:15px;
+border:1px solid #333;
 }
 
-.form-section h2{
+.form-box h2{
 text-align:center;
 color:gold;
 margin-bottom:20px;
 }
 
-input,
-select{
+.form-box label{
+display:block;
+margin-top:15px;
+margin-bottom:5px;
+}
+
+.form-box input,
+.form-box select{
 width:100%;
 padding:12px;
-margin-bottom:15px;
 border:none;
 border-radius:8px;
-background:#333;
+background:#2a2a2a;
 color:white;
 }
 
 .buy-btn{
 width:100%;
+margin-top:25px;
 padding:15px;
 background:gold;
-border:none;
-font-size:18px;
+color:black;
 font-weight:bold;
+font-size:18px;
+border:none;
+border-radius:10px;
 cursor:pointer;
-border-radius:8px;
 }
 
 .buy-btn:hover{
-opacity:0.9;
-}
-
-.voucher{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:20px;
-max-width:1200px;
-margin:auto;
-}
-
-.voucher-card{
-background:#1a1a1a;
-padding:20px;
-border-radius:12px;
-text-align:center;
-border:1px solid #333;
-}
-
-.voucher-card h3{
-color:gold;
+opacity:.9;
 }
 
 footer{
 margin-top:50px;
-padding:25px;
+background:#000;
+padding:20px;
 text-align:center;
-background:black;
 border-top:2px solid gold;
 }
 
@@ -189,33 +155,17 @@ border-top:2px solid gold;
 <body>
 
 <header>
-<div class="logo">
-KAYVARA VT MARKET
-</div>
-
-<div class="subtitle">
-Top Up Game • Voucher Digital • E-Wallet
-</div>
+<div class="logo">KAYVARA VT MARKET</div>
+<div class="subtitle">Top Up Game & Voucher Digital</div>
 </header>
 
 <section class="hero">
-<h1>TOP UP GAME MURAH & CEPAT</h1>
-<p>
-Mobile Legends, Free Fire, PUBG Mobile, Roblox, Valorant dan lainnya
-</p>
-
-<a href="#topup" class="btn">
-TOP UP SEKARANG
-</a>
+<h1>TOP UP GAME ONLINE</h1>
+<p>Mobile Legends • Free Fire • PUBG Mobile • Valorant • Roblox • Steam</p>
 </section>
 
 <h2 class="section-title">
-GAME POPULER
-</h2>
-
-<div class="games">
-<h2 class="section-title">
-SEMUA GAME ONLINE
+GAME MOBILE
 </h2>
 
 <div class="games">
@@ -236,12 +186,12 @@ SEMUA GAME ONLINE
 </div>
 
 <div class="card">
-<h3>Honor of Kings</h3>
+<h3>Honor Of Kings</h3>
 <p>Token HOK</p>
 </div>
 
 <div class="card">
-<h3>Call of Duty Mobile</h3>
+<h3>Call Of Duty Mobile</h3>
 <p>CP CODM</p>
 </div>
 
@@ -260,44 +210,17 @@ SEMUA GAME ONLINE
 <p>Oneiric Shard</p>
 </div>
 
-<div class="card">
-<h3>Zenless Zone Zero</h3>
-<p>Monochrome</p>
 </div>
 
-<div class="card">
-<h3>Arena Breakout</h3>
-<p>Top Up Bond</p>
-</div>
+<h2 class="section-title">
+GAME PC
+</h2>
 
-<div class="card">
-<h3>Blood Strike</h3>
-<p>Gold</p>
-</div>
-
-<div class="card">
-<h3>Delta Force Mobile</h3>
-<p>Credits</p>
-</div>
+<div class="games">
 
 <div class="card">
 <h3>Valorant</h3>
-<p>Valorant Points</p>
-</div>
-
-<div class="card">
-<h3>League of Legends</h3>
-<p>Riot Points</p>
-</div>
-
-<div class="card">
-<h3>League of Legends Wild Rift</h3>
-<p>Wild Cores</p>
-</div>
-
-<div class="card">
-<h3>Counter Strike 2</h3>
-<p>Steam Wallet</p>
+<p>Valorant Point</p>
 </div>
 
 <div class="card">
@@ -306,38 +229,13 @@ SEMUA GAME ONLINE
 </div>
 
 <div class="card">
-<h3>EA FC Online</h3>
-<p>FC Points</p>
+<h3>Counter Strike 2</h3>
+<p>Steam Wallet</p>
 </div>
 
 <div class="card">
-<h3>CrossFire</h3>
-<p>CF Cash</p>
-</div>
-
-<div class="card">
-<h3>Point Blank</h3>
-<p>PB Cash</p>
-</div>
-
-<div class="card">
-<h3>Black Desert Online</h3>
-<p>Pearls</p>
-</div>
-
-<div class="card">
-<h3>World of Warcraft</h3>
-<p>Game Time</p>
-</div>
-
-<div class="card">
-<h3>Final Fantasy XIV</h3>
-<p>Subscription</p>
-</div>
-
-<div class="card">
-<h3>Minecraft</h3>
-<p>Minecoins</p>
+<h3>League Of Legends</h3>
+<p>Riot Point</p>
 </div>
 
 <div class="card">
@@ -351,136 +249,79 @@ SEMUA GAME ONLINE
 </div>
 
 <div class="card">
-<h3>Rainbow Six Siege</h3>
-<p>R6 Credits</p>
+<h3>Minecraft</h3>
+<p>Minecoins</p>
 </div>
 
 <div class="card">
-<h3>Overwatch 2</h3>
-<p>Coins</p>
-</div>
-
-<div class="card">
-<h3>Marvel Rivals</h3>
-<p>Lattice</p>
-</div>
-
-<div class="card">
-<h3>Steam Wallet</h3>
-<p>Voucher Steam</p>
-</div>
-
-<div class="card">
-<h3>Google Play</h3>
-<p>Gift Card</p>
-</div>
-
-<div class="card">
-<h3>PlayStation Store</h3>
-<p>PSN Wallet</p>
-</div>
-
-<div class="card">
-<h3>Xbox Gift Card</h3>
-<p>Xbox Wallet</p>
-</div>
-
-<div class="card">
-<h3>Nintendo eShop</h3>
-<p>eShop Card</p>
-</div>
-
-</div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
-<h3>Mobile Legends</h3>
-<p>Diamond Murah</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420">
-<h3>Free Fire</h3>
-<p>Top Up Instan</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e">
-<h3>PUBG Mobile</h3>
-<p>UC Termurah</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f">
-<h3>Roblox</h3>
-<p>Robux Cepat</p>
+<h3>Crossfire</h3>
+<p>CF Cash</p>
 </div>
 
 </div>
 
-<section class="form-section" id="topup">
+<div class="form-box">
 
 <h2>FORM TOP UP</h2>
 
-<input type="text" placeholder="Masukkan ID Game">
-
-<input type="text" placeholder="Masukkan Server">
-
+<label>Pilih Game</label>
 <select>
-<option>Pilih Game</option>
 <option>Mobile Legends</option>
 <option>Free Fire</option>
 <option>PUBG Mobile</option>
+<option>Honor Of Kings</option>
+<option>Call Of Duty Mobile</option>
 <option>Roblox</option>
+<option>Genshin Impact</option>
+<option>Honkai Star Rail</option>
 <option>Valorant</option>
+<option>Dota 2</option>
+<option>Counter Strike 2</option>
+<option>League Of Legends</option>
+<option>Fortnite</option>
+<option>Apex Legends</option>
+<option>Minecraft</option>
+<option>Crossfire</option>
 </select>
 
+<label>ID Game</label>
+<input type="text" placeholder="Masukkan ID Game">
+
+<label>Server / Zone ID</label>
+<input type="text" placeholder="Masukkan Server">
+
+<label>Pilih Nominal</label>
 <select>
-<option>Pilih Nominal</option>
-<option>86 Diamond - Rp20.000</option>
-<option>172 Diamond - Rp40.000</option>
-<option>257 Diamond - Rp60.000</option>
-<option>344 Diamond - Rp80.000</option>
-<option>514 Diamond - Rp120.000</option>
+<option>Rp 10.000</option>
+<option>Rp 20.000</option>
+<option>Rp 50.000</option>
+<option>Rp 100.000</option>
+<option>Rp 200.000</option>
+<option>Rp 500.000</option>
+<option>Rp 1.000.000</option>
+</select>
+
+<label>Metode Pembayaran</label>
+<select>
+<option>QRIS</option>
+<option>DANA</option>
+<option>OVO</option>
+<option>GoPay</option>
+<option>ShopeePay</option>
+<option>Bank BCA</option>
+<option>Bank BRI</option>
+<option>Bank Mandiri</option>
+<option>Bank BNI</option>
 </select>
 
 <button class="buy-btn">
 BELI SEKARANG
 </button>
 
-</section>
-
-<h2 class="section-title">
-VOUCHER DIGITAL
-</h2>
-
-<div class="voucher">
-
-<div class="voucher-card">
-<h3>Google Play</h3>
-<p>Voucher Rp50.000 - Rp500.000</p>
-</div>
-
-<div class="voucher-card">
-<h3>Steam Wallet</h3>
-<p>Voucher Game Steam</p>
-</div>
-
-<div class="voucher-card">
-<h3>Garena Shell</h3>
-<p>Top Up Game Garena</p>
-</div>
-
-<div class="voucher-card">
-<h3>PlayStation Store</h3>
-<p>Voucher PSN</p>
-</div>
-
 </div>
 
 <footer>
 © 2026 KAYVARA VT MARKET
-<br>
-Top Up Game & Voucher Digital
 </footer>
 
 </body>
