@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAYVARA VT MARKET - Admin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="logo">KAYVARA VT MARKET - Admin Panel</div>
+<nav>
+    <a href="#" onclick="logoutUser()">Logout</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Dashboard Admin / Master</h1>
+<p>Selamat datang <span id="displayAdminUsername"></span></p>
+
+<table border="1" style="width:100%;margin-top:20px;">
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>No HP</th>
+            <th>Saldo</th>
+            <th>Referral</th>
+        </tr>
+    </thead>
+    <tbody id="userTableBody">
+    </tbody>
+</table>
+</section>
+
+<script src="script.js"></script>
+<script>
+checkLoginAdmin();
+</script>
+</body>
+</html>
