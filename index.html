@@ -6,48 +6,144 @@
 <title>KAYVARA VT MARKET</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f5f5f5;
+background:#0d0d0d;
+color:white;
 }
 
 header{
-    background:#000;
-    color:white;
-    text-align:center;
-    padding:20px;
+background:#000;
+padding:20px;
+text-align:center;
+border-bottom:2px solid gold;
+}
+
+.logo{
+font-size:36px;
+font-weight:bold;
+color:gold;
 }
 
 .hero{
-    text-align:center;
-    padding:60px 20px;
+padding:80px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:45px;
+color:gold;
+}
+
+.hero p{
+margin-top:10px;
+color:#ccc;
+}
+
+.kategori{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+padding:50px 20px;
+}
+
+.card{
+width:320px;
+background:#1a1a1a;
+border:1px solid #333;
+border-radius:15px;
+padding:25px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:gold;
+}
+
+.card h2{
+color:gold;
+margin-bottom:15px;
+}
+
+.card p{
+margin-bottom:20px;
+color:#ccc;
 }
 
 .btn{
-    background:#000;
-    color:white;
-    padding:12px 25px;
-    border:none;
-    border-radius:5px;
-    text-decoration:none;
+display:inline-block;
+padding:12px 25px;
+background:gold;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
 }
+
+footer{
+margin-top:50px;
+padding:20px;
+text-align:center;
+background:#000;
+border-top:2px solid gold;
+}
+
 </style>
 </head>
-
 <body>
 
 <header>
-    <h1>KAYVARA VT MARKET</h1>
-    <p>Platform Jual Beli Online Indonesia</p>
+<div class="logo">
+KAYVARA VT MARKET
+</div>
 </header>
 
 <section class="hero">
-    <h2>Selamat Datang</h2>
-    <p>Marketplace resmi KAYVARA VT MARKET</p>
-    <a href="produk.html" class="btn">Mulai Belanja</a>
-    <a href="topup.html" class="btn">Mulai Belanja</a>
+<h1>Marketplace KAYVARA VT MARKET</h1>
+<p>Pakaian Premium & Top Up Game Digital</p>
 </section>
+
+<div class="kategori">
+
+<div class="card">
+<h2>👕 VEAT APPAREL</h2>
+<p>
+Kaos, Hoodie, Topi dan Fashion Premium VEAT.
+</p>
+
+<a href="produk.html" class="btn">
+BELANJA PAKAIAN
+</a>
+
+</div>
+
+<div class="card">
+<h2>🎮 TOP UP GAME</h2>
+<p>
+Mobile Legends, Free Fire, PUBG Mobile, Roblox dan lainnya.
+</p>
+
+<a href="topup.html" class="btn">
+TOP UP SEKARANG
+</a>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 KAYVARA VT MARKET
+</footer>
 
 </body>
 </html>
