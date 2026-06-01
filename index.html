@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,35 +20,50 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#050505;
+background:#0a0a0a;
 color:white;
 }
 
 /* HEADER */
 
 header{
+background:#000;
+border-bottom:1px solid #222;
+padding:15px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
-background:#000;
-border-bottom:1px solid #222;
 position:sticky;
 top:0;
-z-index:100;
+z-index:999;
 }
 
 .logo{
-font-size:28px;
-font-weight:700;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:50px;
+height:50px;
+object-fit:contain;
+}
+
+.logo h2{
 color:#d4af37;
+font-size:22px;
+}
+
+nav{
+display:flex;
+gap:25px;
 }
 
 nav a{
-color:white;
 text-decoration:none;
-margin-left:30px;
-transition:.3s;
+color:white;
+font-size:14px;
 }
 
 nav a:hover{
@@ -56,343 +73,315 @@ color:#d4af37;
 /* HERO */
 
 .hero{
-min-height:80vh;
+height:500px;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('img/banner.jpg');
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
-justify-content:space-between;
-padding:80px 8%;
-background:
-linear-gradient(to right,#000 40%,rgba(0,0,0,.4)),
-url('banner.jpg') center/cover;
+justify-content:center;
+text-align:center;
+padding:20px;
 }
 
-.hero-text{
-max-width:550px;
-}
-
-.hero-text h1{
-font-size:65px;
-line-height:1.1;
-margin-bottom:20px;
-}
-
-.hero-text span{
+.hero-content h1{
+font-size:55px;
 color:#d4af37;
 }
 
-.hero-text p{
-color:#ccc;
-margin-bottom:30px;
+.hero-content p{
+margin-top:15px;
+color:#ddd;
+font-size:18px;
 }
 
-.btn{
+.hero-btn{
 display:inline-block;
+margin-top:25px;
 padding:14px 35px;
 background:#d4af37;
 color:black;
+font-weight:600;
+border-radius:10px;
 text-decoration:none;
-font-weight:bold;
-border-radius:8px;
 }
 
-.btn:hover{
-opacity:.8;
+/* SEARCH */
+
+.search-box{
+padding:30px 5%;
 }
 
-/* INFO */
-
-.info{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-padding:40px 8%;
+.search-box input{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:#181818;
+color:white;
+font-size:16px;
 }
 
-.info-box{
-background:#111;
-padding:25px;
-border:1px solid #222;
-border-radius:15px;
-}
-
-.info-box h3{
-color:#d4af37;
-margin-bottom:10px;
-}
-
-/* KATEGORI */
+/* SECTION */
 
 .section-title{
-text-align:center;
-font-size:40px;
-margin-top:50px;
-margin-bottom:40px;
+padding:20px 5%;
+font-size:28px;
 color:#d4af37;
 }
 
-.kategori{
+/* GAME GRID */
+
+.game-grid{
+padding:0 5% 50px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-padding:0 8%;
+grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+gap:20px;
 }
 
-.card{
+.game-card{
 background:#111;
-border-radius:20px;
-overflow:hidden;
 border:1px solid #222;
-transition:.4s;
+border-radius:15px;
+overflow:hidden;
+transition:.3s;
+cursor:pointer;
 }
 
-.card:hover{
-transform:translateY(-10px);
+.game-card:hover{
+transform:translateY(-5px);
 border-color:#d4af37;
 }
 
-.card img{
+.game-card img{
 width:100%;
-height:230px;
+height:220px;
 object-fit:cover;
+display:block;
 }
 
-.card-content{
-padding:25px;
+.game-info{
+padding:15px;
 }
 
-.card h2{
-color:#d4af37;
-margin-bottom:15px;
-}
-
-.card p{
-color:#ccc;
-margin-bottom:20px;
+.game-info h3{
+font-size:16px;
+color:white;
 }
 
 /* PROMO */
 
 .promo{
-margin:80px 8%;
-padding:60px;
-background:linear-gradient(135deg,#111,#1a1a1a);
-border-radius:25px;
+margin:0 5% 50px;
+background:linear-gradient(135deg,#111,#1d1d1d);
 border:1px solid #333;
+padding:40px;
+border-radius:20px;
 text-align:center;
 }
 
 .promo h2{
-font-size:45px;
 color:#d4af37;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .promo p{
-margin-bottom:25px;
 color:#ccc;
 }
 
 /* FOOTER */
 
 footer{
-margin-top:80px;
 background:#000;
-padding:50px 8%;
+padding:40px 5%;
+margin-top:30px;
+border-top:1px solid #222;
 }
 
 .footer-grid{
 display:grid;
-grid-template-columns:2fr 1fr 1fr;
-gap:40px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .footer-title{
 color:#d4af37;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
-.footer-grid a{
-display:block;
-margin-bottom:10px;
+footer p,
+footer a{
 color:#ccc;
 text-decoration:none;
-}
-
-.footer-grid a:hover{
-color:#d4af37;
+font-size:14px;
 }
 
 .copy{
-margin-top:40px;
 text-align:center;
-color:#777;
+margin-top:25px;
+color:#666;
 }
 
 </style>
+
 </head>
+
 <body>
 
 <header>
 
 <div class="logo">
-KAYVARA VT MARKET
+
+<img src="img/logo.png" alt="Logo">
+
+<h2>KAYVARA VT MARKET</h2>
+
 </div>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Shop</a>
-<a href="#">Top Up</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
+
+<a href="#">Beranda</a>
+<a href="#">Top Up Game</a>
+<a href="#">Voucher</a>
+<a href="#">VEAT Apparel</a>
+<a href="#">Masuk</a>
+
 </nav>
 
 </header>
 
 <section class="hero">
 
-<div class="hero-text">
+<div class="hero-content">
 
-<h1>
-WELCOME TO <br>
-<span>KAYVARA VT MARKET</span>
-</h1>
+<h1>KAYVARA VT MARKET</h1>
 
 <p>
-Marketplace Premium untuk Fashion VEAT dan Top Up Game Digital.
+Top Up Game Murah, Cepat, Aman dan Otomatis 24 Jam
 </p>
 
-<a href="#" class="btn">
-SHOP NOW
+<a href="#" class="hero-btn">
+TOP UP SEKARANG
 </a>
 
 </div>
 
 </section>
 
-<section class="info">
+<div class="search-box">
 
-<div class="info-box">
-<h3>⚡ Penghantaran Cepat</h3>
-<p>Pesanan diproses dengan pantas.</p>
+<input type="text" placeholder="Cari Game Favorit Anda...">
+
 </div>
-
-<div class="info-box">
-<h3>🛡️ Produk Berkualiti</h3>
-<p>Produk pilihan terbaik.</p>
-</div>
-
-<div class="info-box">
-<h3>💳 Bayaran Mudah</h3>
-<p>Pelbagai kaedah pembayaran.</p>
-</div>
-
-<div class="info-box">
-<h3>🎧 Support 24/7</h3>
-<p>Khidmat pelanggan sentiasa aktif.</p>
-</div>
-
-</section>
 
 <h2 class="section-title">
-KATEGORI POPULAR
+🔥 Game Populer
 </h2>
 
-<section class="kategori">
+<div class="game-grid">
 
-<div class="card">
+<div class="game-card">
+<img src="img/mlbb.jpg">
+<div class="game-info">
+<h3>Mobile Legends</h3>
+</div>
+</div>
 
-<img src="veat.jpg">
+<div class="game-card">
+<img src="img/freefire.jpg">
+<div class="game-info">
+<h3>Free Fire</h3>
+</div>
+</div>
 
-<div class="card-content">
+<div class="game-card">
+<img src="img/pubg.jpg">
+<div class="game-info">
+<h3>PUBG Mobile</h3>
+</div>
+</div>
 
-<h2>VEAT APPAREL</h2>
+<div class="game-card">
+<img src="img/valorant.jpg">
+<div class="game-info">
+<h3>Valorant</h3>
+</div>
+</div>
+
+<div class="game-card">
+<img src="img/roblox.jpg">
+<div class="game-info">
+<h3>Roblox</h3>
+</div>
+</div>
+
+<div class="game-card">
+<img src="img/genshin.jpg">
+<div class="game-info">
+<h3>Genshin Impact</h3>
+</div>
+</div>
+
+</div>
+
+<div class="promo">
+
+<h2>Voucher & Promo Menarik</h2>
 
 <p>
-Kaos, Hoodie, Topi dan Fashion Premium.
+Nikmati berbagai promo dan voucher eksklusif setiap minggu hanya di KAYVARA VT MARKET.
 </p>
 
-<a href="produk.html" class="btn">
-BELANJA
-</a>
-
 </div>
-
-</div>
-
-<div class="card">
-
-<img src="game.jpg">
-
-<div class="card-content">
-
-<h2>TOP UP GAME</h2>
-
-<p>
-Valorant, Mobile Legends, Free Fire, PUBG dan banyak lagi.
-</p>
-
-<a href="pc-topup.html" class="btn">
-TOP UP
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="promo">
-
-<h2>PROMOSI TERKINI</h2>
-
-<p>
-Dapatkan voucher dan tawaran menarik setiap minggu.
-</p>
-
-<a href="#" class="btn">
-LIHAT PROMO
-</a>
-
-</section>
 
 <footer>
 
 <div class="footer-grid">
 
 <div>
+
 <h3 class="footer-title">
 KAYVARA VT MARKET
 </h3>
 
 <p>
-Express Togetherness
+Platform Top Up Game dan Digital Store Indonesia.
 </p>
+
 </div>
 
 <div>
+
 <h3 class="footer-title">
-MENU
+Menu
 </h3>
 
-<a href="#">Home</a>
-<a href="#">Shop</a>
-<a href="#">Top Up</a>
+<p>Beranda</p>
+<p>Top Up Game</p>
+<p>Voucher</p>
+
 </div>
 
 <div>
+
 <h3 class="footer-title">
-HUBUNGI KAMI
+Kontak
 </h3>
 
-<a href="#">WhatsApp</a>
-<a href="#">Telegram</a>
-<a href="#">Facebook</a>
+<p>WhatsApp</p>
+<p>Telegram</p>
+<p>Email</p>
+
 </div>
 
 </div>
 
 <div class="copy">
+
 © 2026 KAYVARA VT MARKET
+
 </div>
 
 </footer>
