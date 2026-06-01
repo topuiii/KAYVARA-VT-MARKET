@@ -1,7 +1,128 @@
-body{
-    background-color: black;
+/* Reset & body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0b0b0b;
     color: gold;
-    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #111;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav a {
+    color: gold;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+/* Hero */
+.hero {
     text-align: center;
-    margin-top: 100px;
+    padding: 100px 20px;
+    background: linear-gradient(45deg, #111, #222);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: gold;
+    color: #111;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid gold;
+    color: gold;
+}
+
+.btn-secondary:hover {
+    background-color: gold;
+    color: #111;
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.features .feature {
+    max-width: 200px;
+}
+
+/* Categories */
+.categories {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.categories h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    background-color: #222;
+    border: 2px solid gold;
+    padding: 50px 20px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
 }
