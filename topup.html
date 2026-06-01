@@ -163,19 +163,18 @@ document.getElementById("formArea").innerHTML=`
 <label>Zone ID</label>
 <input type="text">
 
-<h3>Pilih Diamond</h3>
+<label>Jumlah Diamond</label>
 
-<div class="nominal">
+<input
+type="number"
+id="diamond"
+min="1"
+max="99999"
+placeholder="Masukkan jumlah diamond">
 
-<label><input type="radio" name="ml"> 86 Diamond - Rp20.000</label>
-
-<label><input type="radio" name="ml"> 172 Diamond - Rp40.000</label>
-
-<label><input type="radio" name="ml"> 257 Diamond - Rp60.000</label>
-
-<label><input type="radio" name="ml"> 344 Diamond - Rp80.000</label>
-
-</div>
+<h3 id="hargaDiamond">
+Total Harga : Rp 0
+</h3>
 
 <button>BELI SEKARANG</button>
 
@@ -297,3 +296,30 @@ document.getElementById("formArea").innerHTML=`
 
 </body>
 </html>
+<script>
+
+const diamondInput =
+document.getElementById("diamond");
+
+const hargaDiamond =
+document.getElementById("hargaDiamond");
+
+diamondInput.addEventListener("input", function(){
+
+let jumlah =
+parseInt(this.value) || 0;
+
+/*
+1 Diamond = Rp250
+*/
+
+let total =
+jumlah * 250;
+
+hargaDiamond.innerHTML =
+"Total Harga : Rp " +
+total.toLocaleString("id-ID");
+
+});
+
+</script>
