@@ -8,36 +8,27 @@
 </head>
 <body>
 <div class="auth-container">
-<h1>Daftar Akun Baru</h1>
-<form id="registerForm">
-<label for="username">Username</label>
-<input type="text" id="username" placeholder="Masukkan username" required>
-
-<label for="email">Email</label>
-<input type="email" id="email" placeholder="Masukkan email" required>
-
-<label for="password">Password</label>
-<input type="password" id="password" placeholder="Masukkan password" required>
-
-<button type="submit" class="btn-primary">Daftar</button>
-</form>
-<p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
+    <h1>Daftar Akun Baru</h1>
+    <form id="registerForm">
+        <label>Username</label>
+        <input type="text" id="regUsername" placeholder="Masukkan username" required>
+        <label>Email</label>
+        <input type="email" id="regEmail" placeholder="Masukkan email" required>
+        <label>Nomor HP</label>
+        <input type="text" id="regHP" placeholder="Masukkan nomor HP" required>
+        <label>Password Login</label>
+        <input type="password" id="regPassword" placeholder="Masukkan password" required>
+        <label>Password Keluarkan Duit (PIN)</label>
+        <input type="password" id="regPin" placeholder="PIN tarik duit" required>
+        <label>Kode Referral (opsional)</label>
+        <input type="text" id="regReferral" placeholder="Kode referral">
+        <button type="submit" class="btn-primary">Daftar</button>
+    </form>
+    <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
 </div>
-
+<script src="script.js"></script>
 <script>
-const form = document.getElementById('registerForm');
-form.addEventListener('submit', function(e){
-    e.preventDefault();
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    if(username && email && password){
-        localStorage.setItem('loggedIn','true');
-        localStorage.setItem('username',username);
-        alert('Akun berhasil dibuat!');
-        window.location.href = 'index.html';
-    }
-});
+document.getElementById('registerForm').addEventListener('submit', registerMember);
 </script>
 </body>
 </html>
