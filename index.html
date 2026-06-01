@@ -97,13 +97,19 @@ if(localStorage.getItem('loggedIn') !== 'true'){
 </script>
 <script>
 
-// Cek login
+// ===================
+// CEK LOGIN
+// ===================
+
 if(localStorage.getItem('loggedIn') !== 'true'){
     alert('Silahkan login dulu!');
     window.location.href = 'login.html';
 }
 
-// Tombol logout
+// ===================
+// LOGOUT
+// ===================
+
 const logoutBtn = document.getElementById('logoutBtn');
 
 if(logoutBtn){
@@ -118,6 +124,48 @@ if(logoutBtn){
     });
 }
 
+// ===================
+// SISTEM SALDO
+// ===================
+
+let saldo = localStorage.getItem('saldo');
+
+if(!saldo){
+    saldo = 0;
+    localStorage.setItem('saldo', saldo);
+}
+
+document.getElementById('saldoDisplay')
+.innerText =
+'Rp ' + Number(saldo).toLocaleString('id-ID');
+
+// fungsi top up
+function topUpSaldo(){
+
+    const jumlah = prompt(
+        'Masukkan jumlah top up (contoh: 50000)'
+    );
+
+    if(jumlah && !isNaN(jumlah)){
+
+        saldo =
+        Number(localStorage.getItem('saldo'))
+        + Number(jumlah);
+
+        localStorage.setItem('saldo', saldo);
+
+        document.getElementById('saldoDisplay')
+        .innerText =
+        'Rp ' + saldo.toLocaleString('id-ID');
+
+        alert(
+            'Top Up Berhasil Rp ' +
+            Number(jumlah).toLocaleString('id-ID')
+        );
+    }
+}
+
+</script>
 </script>
 </body>
 </html>
