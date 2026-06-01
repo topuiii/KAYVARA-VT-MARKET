@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAYVARA VT MARKET - PC GAMES</title>
+
+<style>
+
+body{
+background:#111;
+color:white;
+font-family:Arial,sans-serif;
+margin:0;
+}
+
+header{
+background:black;
+padding:20px;
+text-align:center;
+border-bottom:3px solid gold;
+}
+
+h1{
+color:gold;
+}
+
+.games{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:30px;
+max-width:1400px;
+margin:auto;
+}
+
+.game{
+background:#1a1a1a;
+border-radius:12px;
+overflow:hidden;
+cursor:pointer;
+border:1px solid #333;
+}
+
+.game img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.game h3{
+padding:15px;
+text-align:center;
+color:gold;
+}
+
+.form{
+display:none;
+max-width:800px;
+margin:30px auto;
+background:#1a1a1a;
+padding:25px;
+border-radius:10px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-top:10px;
+margin-bottom:15px;
+border:none;
+border-radius:8px;
+background:#333;
+color:white;
+}
+
+button{
+width:100%;
+padding:15px;
+background:gold;
+border:none;
+font-weight:bold;
+cursor:pointer;
+}
+
+.price{
+background:#222;
+padding:10px;
+margin-top:10px;
+border-radius:8px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<h1>KAYVARA VT MARKET</h1>
+<p>Top Up Game PC</p>
+</header>
+
+<div class="games">
+
+<div class="game" onclick="valorant()">
+<img src="https://via.placeholder.com/600x300?text=VALORANT">
+<h3>VALORANT</h3>
+</div>
+
+<div class="game" onclick="pb()">
+<img src="https://via.placeholder.com/600x300?text=POINT+BLANK">
+<h3>POINT BLANK</h3>
+</div>
+
+<div class="game" onclick="dota2()">
+<img src="https://via.placeholder.com/600x300?text=DOTA+2">
+<h3>DOTA 2</h3>
+</div>
+
+<div class="game" onclick="cs2()">
+<img src="https://via.placeholder.com/600x300?text=COUNTER+STRIKE+2">
+<h3>COUNTER STRIKE 2</h3>
+</div>
+
+<div class="game" onclick="lol()">
+<img src="https://via.placeholder.com/600x300?text=LEAGUE+OF+LEGENDS">
+<h3>LEAGUE OF LEGENDS</h3>
+</div>
+
+<div class="game" onclick="fortnite()">
+<img src="https://via.placeholder.com/600x300?text=FORTNITE">
+<h3>FORTNITE</h3>
+</div>
+
+</div>
+
+<div id="form" class="form"></div>
+
+<script>
+
+function valorant(){
+document.getElementById("form").style.display="block";
+document.getElementById("form").innerHTML=`
+
+<h2>VALORANT</h2>
+
+<input placeholder="Masukkan Riot ID">
+
+<select>
+<option>125 VP - Rp15.000</option>
+<option>420 VP - Rp50.000</option>
+<option>700 VP - Rp75.000</option>
+<option>1375 VP - Rp150.000</option>
+<option>2400 VP - Rp250.000</option>
+<option>4000 VP - Rp400.000</option>
+</select>
+
+<button>BELI SEKARANG</button>
+
+`;
+}
+
+function pb(){
+document.getElementById("form").style.display="block";
+document.getElementById("form").innerHTML=`
+
+<h2>POINT BLANK</h2>
+
+<input placeholder="Masukkan ID Akun">
+
+<select>
+<option>1200 Cash - Rp12.000</option>
+<option>6000 Cash - Rp60.000</option>
+<option>12000 Cash - Rp120.000</option>
+<option>24000 Cash - Rp240.000</option>
+</select>
+
+<button>BELI SEKARANG</button>
+
+`;
+}
+
+function dota2(){
+document.getElementById("form").style.display="block";
+document.getElementById("form").innerHTML=`
+
+<h2>DOTA 2</h2>
+
+<input placeholder="Steam ID">
+
+<select>
+<option>Steam Wallet 12K</option>
+<option>Steam Wallet 45K</option>
+<option>Steam Wallet 90K</option>
+<option>Steam Wallet 120K</option>
+<option>Steam Wallet 250K</option>
+</select>
+
+<button>BELI SEKARANG</button>
+
+`;
+}
+
+function cs2(){
+document.getElementById("form").style.display="block";
+document.getElementById("form").innerHTML=`
+
+<h2>COUNTER STRIKE 2</h2>
+
+<input placeholder="Steam ID">
+
+<select>
+<option>Steam Wallet 12K</option>
+<option>Steam Wallet 45K</option>
+<option>Steam Wallet 90K</option>
+<option>Steam Wallet 250K</option>
+</select>
+
+<button>BELI SEKARANG</button>
+
+`;
+}
+
+function lol(){
+document.getElementById("form").style.display="block";
+document.getElementById("form").innerHTML=`
+
+<h2>LEAGUE OF LEGENDS</h2>
+
+<input placeholder="Riot ID">
+
+<select>
+<option>575 RP - Rp50.000</option>
+<option>1380 RP - Rp120.000</option>
+<option>2800 RP - Rp250.000</option>
+</select>
+
+<button>BELI SEKARANG</button>
+
+`;
+}
+
+function fortnite(){
+document.getElementById("form").style.display="block";
+document.getElementById("form").innerHTML=`
+
+<h2>FORTNITE</h2>
+
+<input placeholder="Epic Games ID">
+
+<select>
+<option>1000 V-Bucks - Rp100.000</option>
+<option>2800 V-Bucks - Rp250.000</option>
+<option>5000 V-Bucks - Rp400.000</option>
+<option>13500 V-Bucks - Rp1.000.000</option>
+</select>
+
+<button>BELI SEKARANG</button>
+
+`;
+}
+
+</script>
+
+</body>
+</html>
