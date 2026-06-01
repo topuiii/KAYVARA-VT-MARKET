@@ -82,7 +82,30 @@ if(localStorage.getItem('loggedIn') !== 'true'){
 }
 
 </script>
+<script>
 
+// Cek login
+if(localStorage.getItem('loggedIn') !== 'true'){
+    alert('Silahkan login dulu!');
+    window.location.href = 'login.html';
+}
+
+// Tombol logout
+const logoutBtn = document.getElementById('logoutBtn');
+
+if(logoutBtn){
+    logoutBtn.addEventListener('click', function(e){
+        e.preventDefault();
+
+        localStorage.removeItem('loggedIn');
+        localStorage.removeItem('username');
+
+        alert('Logout berhasil!');
+        window.location.href = 'login.html';
+    });
+}
+
+</script>
 </body>
 </html>
 </body>
