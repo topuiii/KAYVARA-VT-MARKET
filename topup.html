@@ -3,326 +3,297 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>KAYVARA VT MARKET - Top Up Game</title>
+<title>KAYVARA VT MARKET - TOP UP GAME</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
 
 body{
 background:#0d0d0d;
 color:white;
+font-family:Arial,sans-serif;
+margin:0;
 }
 
 header{
-background:#000;
+background:black;
 padding:20px;
 text-align:center;
 border-bottom:3px solid gold;
 }
 
-.logo{
-font-size:32px;
-font-weight:bold;
+h1{
 color:gold;
-}
-
-.subtitle{
-color:#ccc;
-margin-top:5px;
-}
-
-.hero{
-padding:60px 20px;
-text-align:center;
-background:linear-gradient(135deg,#000,#1a1a1a);
-}
-
-.hero h1{
-font-size:42px;
-color:gold;
-}
-
-.hero p{
-margin-top:10px;
-color:#ddd;
-}
-
-.section-title{
-text-align:center;
-margin:40px 0 20px;
-color:gold;
-font-size:28px;
 }
 
 .games{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
-max-width:1300px;
+padding:30px;
+max-width:1400px;
 margin:auto;
-padding:20px;
 }
 
-.card{
+.game-card{
 background:#1a1a1a;
-padding:20px;
-border-radius:12px;
-text-align:center;
 border:1px solid #333;
+border-radius:10px;
+overflow:hidden;
+cursor:pointer;
 transition:.3s;
 }
 
-.card:hover{
+.game-card:hover{
 border-color:gold;
 transform:translateY(-5px);
 }
 
-.card h3{
+.game-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.game-card h3{
+text-align:center;
+padding:15px;
 color:gold;
-margin-bottom:10px;
 }
 
-.card p{
-color:#ccc;
-}
-
-.form-box{
-max-width:800px;
-margin:50px auto;
+.form-container{
+max-width:900px;
+margin:40px auto;
 background:#1a1a1a;
 padding:30px;
-border-radius:15px;
-border:1px solid #333;
+border-radius:10px;
+display:none;
 }
 
-.form-box h2{
-text-align:center;
-color:gold;
-margin-bottom:20px;
-}
-
-.form-box label{
-display:block;
-margin-top:15px;
-margin-bottom:5px;
-}
-
-.form-box input,
-.form-box select{
+input,select{
 width:100%;
 padding:12px;
+margin-top:8px;
+margin-bottom:15px;
 border:none;
 border-radius:8px;
-background:#2a2a2a;
+background:#333;
 color:white;
 }
 
-.buy-btn{
+.nominal{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+margin-top:10px;
+}
+
+.nominal label{
+background:#222;
+padding:15px;
+border-radius:8px;
+cursor:pointer;
+display:block;
+}
+
+button{
 width:100%;
-margin-top:25px;
 padding:15px;
 background:gold;
 color:black;
 font-weight:bold;
-font-size:18px;
 border:none;
 border-radius:10px;
 cursor:pointer;
-}
-
-.buy-btn:hover{
-opacity:.9;
-}
-
-footer{
-margin-top:50px;
-background:#000;
-padding:20px;
-text-align:center;
-border-top:2px solid gold;
+margin-top:20px;
 }
 
 </style>
 </head>
-
 <body>
 
 <header>
-<div class="logo">KAYVARA VT MARKET</div>
-<div class="subtitle">Top Up Game & Voucher Digital</div>
+<h1>KAYVARA VT MARKET</h1>
+<p>TOP UP GAME ONLINE</p>
 </header>
 
-<section class="hero">
-<h1>TOP UP GAME ONLINE</h1>
-<p>Mobile Legends • Free Fire • PUBG Mobile • Valorant • Roblox • Steam</p>
-</section>
-
-<h2 class="section-title">
-GAME MOBILE
-</h2>
-
 <div class="games">
 
-<div class="card">
+<div class="game-card" onclick="showML()">
+<img src="https://via.placeholder.com/400x200?text=Mobile+Legends">
 <h3>Mobile Legends</h3>
-<p>Diamond MLBB</p>
 </div>
 
-<div class="card">
+<div class="game-card" onclick="showFF()">
+<img src="https://via.placeholder.com/400x200?text=Free+Fire">
 <h3>Free Fire</h3>
-<p>Diamond FF</p>
 </div>
 
-<div class="card">
+<div class="game-card" onclick="showPUBG()">
+<img src="https://via.placeholder.com/400x200?text=PUBG+Mobile">
 <h3>PUBG Mobile</h3>
-<p>UC PUBG</p>
 </div>
 
-<div class="card">
-<h3>Honor Of Kings</h3>
-<p>Token HOK</p>
-</div>
-
-<div class="card">
-<h3>Call Of Duty Mobile</h3>
-<p>CP CODM</p>
-</div>
-
-<div class="card">
-<h3>Roblox</h3>
-<p>Robux</p>
-</div>
-
-<div class="card">
-<h3>Genshin Impact</h3>
-<p>Genesis Crystal</p>
-</div>
-
-<div class="card">
-<h3>Honkai Star Rail</h3>
-<p>Oneiric Shard</p>
-</div>
-
-</div>
-
-<h2 class="section-title">
-GAME PC
-</h2>
-
-<div class="games">
-
-<div class="card">
+<div class="game-card" onclick="showValorant()">
+<img src="https://via.placeholder.com/400x200?text=Valorant">
 <h3>Valorant</h3>
-<p>Valorant Point</p>
 </div>
 
-<div class="card">
-<h3>Dota 2</h3>
-<p>Steam Wallet</p>
-</div>
-
-<div class="card">
-<h3>Counter Strike 2</h3>
-<p>Steam Wallet</p>
-</div>
-
-<div class="card">
-<h3>League Of Legends</h3>
-<p>Riot Point</p>
-</div>
-
-<div class="card">
-<h3>Fortnite</h3>
-<p>V-Bucks</p>
-</div>
-
-<div class="card">
-<h3>Apex Legends</h3>
-<p>Apex Coins</p>
-</div>
-
-<div class="card">
-<h3>Minecraft</h3>
-<p>Minecoins</p>
-</div>
-
-<div class="card">
-<h3>Crossfire</h3>
-<p>CF Cash</p>
+<div class="game-card" onclick="showPB()">
+<img src="https://via.placeholder.com/400x200?text=Point+Blank">
+<h3>Point Blank</h3>
 </div>
 
 </div>
 
-<div class="form-box">
+<div id="formArea" class="form-container"></div>
 
-<h2>FORM TOP UP</h2>
+<script>
 
-<label>Pilih Game</label>
-<select>
-<option>Mobile Legends</option>
-<option>Free Fire</option>
-<option>PUBG Mobile</option>
-<option>Honor Of Kings</option>
-<option>Call Of Duty Mobile</option>
-<option>Roblox</option>
-<option>Genshin Impact</option>
-<option>Honkai Star Rail</option>
-<option>Valorant</option>
-<option>Dota 2</option>
-<option>Counter Strike 2</option>
-<option>League Of Legends</option>
-<option>Fortnite</option>
-<option>Apex Legends</option>
-<option>Minecraft</option>
-<option>Crossfire</option>
-</select>
+function showML(){
+
+document.getElementById("formArea").style.display="block";
+
+document.getElementById("formArea").innerHTML=`
+
+<h2>Mobile Legends</h2>
 
 <label>ID Game</label>
-<input type="text" placeholder="Masukkan ID Game">
+<input type="text">
 
-<label>Server / Zone ID</label>
-<input type="text" placeholder="Masukkan Server">
+<label>Zone ID</label>
+<input type="text">
 
-<label>Pilih Nominal</label>
-<select>
-<option>Rp 10.000</option>
-<option>Rp 20.000</option>
-<option>Rp 50.000</option>
-<option>Rp 100.000</option>
-<option>Rp 200.000</option>
-<option>Rp 500.000</option>
-<option>Rp 1.000.000</option>
-</select>
+<h3>Pilih Diamond</h3>
 
-<label>Metode Pembayaran</label>
-<select>
-<option>QRIS</option>
-<option>DANA</option>
-<option>OVO</option>
-<option>GoPay</option>
-<option>ShopeePay</option>
-<option>Bank BCA</option>
-<option>Bank BRI</option>
-<option>Bank Mandiri</option>
-<option>Bank BNI</option>
-</select>
+<div class="nominal">
 
-<button class="buy-btn">
-BELI SEKARANG
-</button>
+<label><input type="radio" name="ml"> 86 Diamond - Rp20.000</label>
+
+<label><input type="radio" name="ml"> 172 Diamond - Rp40.000</label>
+
+<label><input type="radio" name="ml"> 257 Diamond - Rp60.000</label>
+
+<label><input type="radio" name="ml"> 344 Diamond - Rp80.000</label>
 
 </div>
 
-<footer>
-© 2026 KAYVARA VT MARKET
-</footer>
+<button>BELI SEKARANG</button>
+
+`;
+
+}
+
+function showFF(){
+
+document.getElementById("formArea").style.display="block";
+
+document.getElementById("formArea").innerHTML=`
+
+<h2>Free Fire</h2>
+
+<label>UID</label>
+<input type="text">
+
+<h3>Pilih Diamond</h3>
+
+<div class="nominal">
+
+<label><input type="radio" name="ff"> 70 Diamond - Rp10.000</label>
+
+<label><input type="radio" name="ff"> 140 Diamond - Rp20.000</label>
+
+<label><input type="radio" name="ff"> 355 Diamond - Rp50.000</label>
+
+</div>
+
+<button>BELI SEKARANG</button>
+
+`;
+
+}
+
+function showPUBG(){
+
+document.getElementById("formArea").style.display="block";
+
+document.getElementById("formArea").innerHTML=`
+
+<h2>PUBG Mobile</h2>
+
+<label>Player ID</label>
+<input type="text">
+
+<div class="nominal">
+
+<label><input type="radio" name="pubg"> 60 UC - Rp15.000</label>
+
+<label><input type="radio" name="pubg"> 325 UC - Rp75.000</label>
+
+<label><input type="radio" name="pubg"> 660 UC - Rp150.000</label>
+
+</div>
+
+<button>BELI SEKARANG</button>
+
+`;
+
+}
+
+function showValorant(){
+
+document.getElementById("formArea").style.display="block";
+
+document.getElementById("formArea").innerHTML=`
+
+<h2>Valorant</h2>
+
+<label>Riot ID</label>
+<input type="text">
+
+<div class="nominal">
+
+<label><input type="radio" name="valo"> 125 VP - Rp15.000</label>
+
+<label><input type="radio" name="valo"> 420 VP - Rp50.000</label>
+
+<label><input type="radio" name="valo"> 700 VP - Rp75.000</label>
+
+</div>
+
+<button>BELI SEKARANG</button>
+
+`;
+
+}
+
+function showPB(){
+
+document.getElementById("formArea").style.display="block";
+
+document.getElementById("formArea").innerHTML=`
+
+<h2>Point Blank</h2>
+
+<label>ID Akun</label>
+<input type="text">
+
+<div class="nominal">
+
+<label><input type="radio" name="pb"> 1200 Cash - Rp12.000</label>
+
+<label><input type="radio" name="pb"> 6000 Cash - Rp60.000</label>
+
+<label><input type="radio" name="pb"> 12000 Cash - Rp120.000</label>
+
+</div>
+
+<button>BELI SEKARANG</button>
+
+`;
+
+}
+
+</script>
 
 </body>
 </html>
